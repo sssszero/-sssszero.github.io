@@ -70,7 +70,7 @@ body, html {height:100%; background: #DEE0E2;}
     background: rgba(0, 0, 0, .25);
     text-transform: uppercase;
 }
-.todo-input{width: 50%; background: transparent; padding: 1rem 2rem 1rem 0; border-bottom: 1px solid #E9EDEE;}
+.todo-input{width: 100%; background: transparent; padding: 1rem 2rem 1rem 0; border-bottom: 1px solid #E9EDEE;}
 .todo-input:hover,
 .todo-input:focus{border-bottom: 1px solid #ccc; transition: all .2s ease-in;}
 .todo-input::placeholder{color: #aaa;}
