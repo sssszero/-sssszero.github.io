@@ -1,4 +1,5 @@
 const username = document.getElementById('username');
+const usernameForm = document.getElementById('username-form');
 const signInBtn = document.querySelector('.sign-in');
 const loginWrap = document.querySelector('.login-wrap');
 const dashboard = document.querySelector('.dashboard');
@@ -8,7 +9,8 @@ const userID = document.querySelector('.userID');
 
 let valName;
 
-function logIn(){
+function logIn(event){
+    event.preventDefault();
     valName = username.value;
     if(valName.length > 6){
         error.innerText = "Please enter 6 characters or less";
@@ -30,6 +32,7 @@ function logIn(){
         setInterval(timer, 1000);
     }
 }
+usernameForm.addEventListener("submit",logIn);
 function logOut(){
     localStorage.removeItem('userName');
     localStorage.removeItem("todoLocal");
@@ -37,6 +40,7 @@ function logOut(){
     loginWrap.classList.add('on');
     dashboard.classList.remove('on');
     clearInterval(timer);
+    username.value = "";
 }
 
 const logInfo = localStorage.getItem('userName', valName);    
